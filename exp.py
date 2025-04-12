@@ -14,7 +14,7 @@ def filter_expenses_by_category(expenses, category):
     return [expense for expense in expenses if expense['category'] == category]
 
 # Streamlit App
-st.title("Simple Expense Tracker")
+st.title("Track Your Money")
 
 # Store expenses in session state
 if 'expenses' not in st.session_state:
