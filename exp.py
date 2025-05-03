@@ -18,14 +18,13 @@ st.title("Track Your Money")
 
 # Store expenses in session state
 if 'expenses' not in st.session_state:
-    st.session_state.expenses = []
+    st.session_state.expenses = [st.number_input("Set your Budget")]
 
 # Add expense form
 with st.form("expense_form"):
     amount = st.number_input("Amount", min_value=0.0)  # Removed format="%.2f"
     category = st.text_input("Category")
     date = st.date_input("Date")
-    budget = st.number_input("Set your Budget")
     submitted = st.form_submit_button("Add Expense")
     if submitted:
         if category.strip():
