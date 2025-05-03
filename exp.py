@@ -45,6 +45,16 @@ else:
 st.subheader("Total Spent")
 st.write(f"${total_expenses(st.session_state.expenses)}")
 
+# Budget
+st.subheader("Budget")
+if budget > 0:
+    remaining = budget - amount
+    if remaining>=0
+    st.success(f"You are within budget. Remaining: ${remaining}")
+    else:
+        st.error(f"You succeeded the budget by ${abs(remaining)}")
+else:
+    st.info("No budget entered yet.")
 # Filter by category
 st.subheader("Filter by Category")
 categories = list(set([e['category'] for e in st.session_state.expenses]))
