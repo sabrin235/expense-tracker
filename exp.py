@@ -49,7 +49,7 @@ st.write(f"${total_expenses(st.session_state.expenses)}")
 st.subheader("Budget")
 if budget > 0:
     remaining = budget - amount
-    if remaining>=0
+    if remaining>=0:
     st.success(f"You are within budget. Remaining: ${remaining}")
     else:
         st.error(f"You succeeded the budget by ${abs(remaining)}")
